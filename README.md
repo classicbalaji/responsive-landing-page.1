@@ -558,6 +558,294 @@
     }
 
     /* =====================================================
+       PRICING
+    ===================================================== */
+    .pricing {
+      background: var(--light);
+    }
+
+    .pricing-grid {
+      display: grid;
+      grid-template-columns: repeat(3, 1fr);
+      gap: 22px;
+    }
+
+    .price-card {
+      position: relative;
+      padding: 30px;
+      background: white;
+      border: 1px solid var(--border);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow-sm);
+      transition: transform 0.3s, box-shadow 0.3s;
+    }
+
+    .price-card:hover {
+      transform: translateY(-5px);
+      box-shadow: var(--shadow-md);
+    }
+
+    .price-card.popular {
+      border: 2px solid var(--primary);
+      box-shadow: var(--shadow-lg);
+    }
+
+    .popular-badge {
+      position: absolute;
+      top: -13px;
+      left: 50%;
+      transform: translateX(-50%);
+      padding: 4px 14px;
+      color: white;
+      background: var(--primary);
+      border-radius: 20px;
+      font-size: 0.68rem;
+      font-weight: 700;
+    }
+
+    .price-card h3 {
+      color: var(--dark);
+      font-size: 1.2rem;
+      margin-bottom: 5px;
+    }
+
+    .price-card > p {
+      color: var(--muted);
+      font-size: 0.82rem;
+      margin-bottom: 20px;
+    }
+
+    .price {
+      color: var(--dark);
+      font-size: 2.3rem;
+      font-weight: 800;
+      margin-bottom: 20px;
+    }
+
+    .price span {
+      color: var(--muted);
+      font-size: 0.75rem;
+      font-weight: 400;
+    }
+
+    .price-list {
+      list-style: none;
+      margin-bottom: 25px;
+    }
+
+    .price-list li {
+      color: var(--text);
+      font-size: 0.85rem;
+      padding: 6px 0;
+    }
+
+    .price-list li::before {
+      content: "✓";
+      color: var(--success);
+      font-weight: 800;
+      margin-right: 8px;
+    }
+
+    .price-card .btn {
+      width: 100%;
+    }
+
+    /* =====================================================
+       ABOUT
+    ===================================================== */
+    .about {
+      background: white;
+    }
+
+    .about-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 70px;
+      align-items: center;
+    }
+
+    .about-content h2 {
+      color: var(--dark);
+      font-size: clamp(2rem, 4vw, 2.7rem);
+      line-height: 1.15;
+      margin-bottom: 18px;
+    }
+
+    .about-content p {
+      color: var(--muted);
+      margin-bottom: 16px;
+    }
+
+    .about-list {
+      list-style: none;
+      margin-top: 20px;
+    }
+
+    .about-list li {
+      display: flex;
+      align-items: center;
+      gap: 9px;
+      margin-bottom: 10px;
+      font-weight: 600;
+    }
+
+    .devices {
+      min-height: 320px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      border-radius: 25px;
+      background: linear-gradient(135deg, #eff6ff, #dbeafe);
+      overflow: hidden;
+    }
+
+    .laptop {
+      width: 290px;
+      height: 180px;
+      padding: 10px;
+      background: white;
+      border: 6px solid #1e293b;
+      border-radius: 12px;
+      box-shadow: var(--shadow-md);
+      transform: rotate(-3deg);
+    }
+
+    .laptop-screen {
+      width: 100%;
+      height: 100%;
+      padding: 12px;
+      border-radius: 5px;
+      background: #eff6ff;
+    }
+
+    .mini-header {
+      height: 9px;
+      width: 55%;
+      background: #2563eb;
+      border-radius: 10px;
+      margin-bottom: 13px;
+    }
+
+    .mini-card {
+      height: 48px;
+      background: white;
+      border-radius: 7px;
+      margin-bottom: 9px;
+      box-shadow: 0 2px 7px rgba(0,0,0,0.06);
+    }
+
+    /* =====================================================
+       CONTACT
+    ===================================================== */
+    .contact {
+      background: var(--light);
+    }
+
+    .contact-grid {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 50px;
+    }
+
+    .contact-info h3 {
+      color: var(--dark);
+      font-size: 1.5rem;
+      margin-bottom: 15px;
+    }
+
+    .contact-info p {
+      color: var(--muted);
+      margin-bottom: 25px;
+    }
+
+    .contact-item {
+      display: flex;
+      align-items: center;
+      gap: 12px;
+      margin-bottom: 15px;
+      font-weight: 600;
+    }
+
+    .contact-form {
+      display: flex;
+      flex-direction: column;
+      gap: 15px;
+      background: white;
+      padding: 30px;
+      border-radius: var(--radius);
+      border: 1px solid var(--border);
+      box-shadow: var(--shadow-sm);
+    }
+
+    .form-group input,
+    .form-group textarea {
+      width: 100%;
+      padding: 12px;
+      border: 1px solid var(--border);
+      border-radius: 8px;
+      font-family: inherit;
+      font-size: 0.9rem;
+    }
+
+    .form-group textarea {
+      resize: vertical;
+      min-height: 120px;
+    }
+
+    /* =====================================================
+       FOOTER
+    ===================================================== */
+    .footer {
+      padding: 60px 0 22px;
+      color: #94a3b8;
+      background: #0f172a;
+    }
+
+    .footer-grid {
+      display: grid;
+      grid-template-columns: 1.5fr 1fr 1fr 1fr;
+      gap: 40px;
+      padding-bottom: 40px;
+      border-bottom: 1px solid #334155;
+    }
+
+    .footer-brand p {
+      max-width: 280px;
+      margin-top: 13px;
+      font-size: 0.87rem;
+    }
+
+    .footer h4 {
+      color: white;
+      margin-bottom: 14px;
+    }
+
+    .footer ul {
+      list-style: none;
+    }
+
+    .footer li {
+      margin-bottom: 7px;
+    }
+
+    .footer a {
+      font-size: 0.85rem;
+      transition: color 0.2s;
+    }
+
+    .footer a:hover {
+      color: white;
+    }
+
+    .copyright {
+      display: flex;
+      justify-content: space-between;
+      gap: 20px;
+      padding-top: 20px;
+      font-size: 0.78rem;
+    }
+
+    /* =====================================================
        ANIMATIONS
     ===================================================== */
     .reveal {
@@ -575,7 +863,9 @@
        RESPONSIVE BREAKPOINTS
     ===================================================== */
     @media (max-width: 950px) {
-      .hero-grid {
+      .hero-grid,
+      .about-grid,
+      .contact-grid {
         grid-template-columns: 1fr;
         text-align: center;
       }
@@ -595,11 +885,16 @@
         margin: auto;
       }
 
-      .features-grid {
+      .features-grid,
+      .pricing-grid {
         grid-template-columns: 1fr;
         max-width: 600px;
         margin-left: auto;
         margin-right: auto;
+      }
+
+      .footer-grid {
+        grid-template-columns: repeat(2, 1fr);
       }
     }
 
@@ -642,6 +937,15 @@
       }
 
       .search { display: none; }
+
+      .footer-grid {
+        grid-template-columns: 1fr;
+      }
+
+      .copyright {
+        flex-direction: column;
+        text-align: center;
+      }
     }
   </style>
 </head>
@@ -782,6 +1086,167 @@
       </div>
     </div>
   </section>
+
+  <!-- PRICING -->
+  <section class="section pricing" id="pricing">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="section-label">Pricing Plans</span>
+        <h2 class="section-title">Simple, Transparent Pricing</h2>
+        <p class="section-description">Choose the plan that fits your team size and productivity needs.</p>
+      </div>
+
+      <div class="pricing-grid">
+        <div class="price-card reveal">
+          <h3>Starter</h3>
+          <p>Ideal for freelancers and small teams.</p>
+          <div class="price">$19 <span>/ month</span></div>
+          <ul class="price-list">
+            <li>Up to 5 Users</li>
+            <li>Basic Analytics</li>
+            <li>10GB Storage</li>
+            <li>Standard Support</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline">Get Started</a>
+        </div>
+
+        <div class="price-card popular reveal">
+          <span class="popular-badge">Most Popular</span>
+          <h3>Classic</h3>
+          <p>Perfect for growing businesses and active teams.</p>
+          <div class="price">$49 <span>/ month</span></div>
+          <ul class="price-list">
+            <li>Up to 25 Users</li>
+            <li>Advanced Dashboard</li>
+            <li>100GB Storage</li>
+            <li>Priority Support</li>
+            <li>API Access</li>
+          </ul>
+          <a href="#contact" class="btn btn-primary">Get Started</a>
+        </div>
+
+        <div class="price-card reveal">
+          <h3>Enterprise</h3>
+          <p>For large scale operations requiring full control.</p>
+          <div class="price">$99 <span>/ month</span></div>
+          <ul class="price-list">
+            <li>Unlimited Users</li>
+            <li>Custom Workflows</li>
+            <li>1TB Storage</li>
+            <li>24/7 Dedicated Support</li>
+            <li>Custom Integrations</li>
+          </ul>
+          <a href="#contact" class="btn btn-outline">Get Started</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section class="section about" id="about">
+    <div class="container about-grid">
+      <div class="about-content reveal">
+        <span class="section-label">About Us</span>
+        <h2>Built for Modern Product Teams</h2>
+        <p>FlowSync was designed to eliminate fragmentation across team tools. By bringing tasks, calendars, files, and team discussions under one roof, we help teams eliminate friction and stay focused on delivering great software.</p>
+        <ul class="about-list">
+          <li><span class="check">✓</span> Centralized Workspace</li>
+          <li><span class="check">✓</span> Real-Time Syncing across Devices</li>
+          <li><span class="check">✓</span> Enterprise-grade Security & Compliance</li>
+        </ul>
+      </div>
+
+      <div class="devices reveal">
+        <div class="laptop">
+          <div class="laptop-screen">
+            <div class="mini-header"></div>
+            <div class="mini-card"></div>
+            <div class="mini-card"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="section contact" id="contact">
+    <div class="container">
+      <div class="section-heading reveal">
+        <span class="section-label">Contact</span>
+        <h2 class="section-title">Get in Touch with Us</h2>
+        <p class="section-description">Have questions or want a custom demo? Reach out to our support team.</p>
+      </div>
+
+      <div class="contact-grid">
+        <div class="contact-info reveal">
+          <h3>Contact Details</h3>
+          <p>We are here to help you set up FlowSync for your organization.</p>
+          <div class="contact-item">
+            <span>👤 Name:</span> Classic
+          </div>
+          <div class="contact-item">
+            <span>📞 Phone:</span> xxxx xxxx 09
+          </div>
+          <div class="contact-item">
+            <span>✉️ Email:</span> support@flowsync.com
+          </div>
+        </div>
+
+        <form class="contact-form reveal" onsubmit="event.preventDefault();">
+          <div class="form-group">
+            <input type="text" placeholder="Your Name" required>
+          </div>
+          <div class="form-group">
+            <input type="email" placeholder="Your Email" required>
+          </div>
+          <div class="form-group">
+            <textarea placeholder="Your Message" required></textarea>
+          </div>
+          <button type="submit" class="btn btn-primary">Send Message</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- FOOTER -->
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="#" class="logo">FlowSync</a>
+          <p>Modern workflow management platform built for speed and simplicity.</p>
+        </div>
+        <div>
+          <h4>Product</h4>
+          <ul>
+            <li><a href="#features">Features</a></li>
+            <li><a href="#pricing">Pricing</a></li>
+            <li><a href="#about">About</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Company</h4>
+          <ul>
+            <li><a href="#">Blog</a></li>
+            <li><a href="#">Careers</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4>Contact Info</h4>
+          <ul>
+            <li>Name: Classic</li>
+            <li>Phone: xxxx xxxx 09</li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        <span>© 2026 FlowSync. All rights reserved.</span>
+        <span>Designed for high performance.</span>
+      </div>
+    </div>
+  </footer>
 
   <!-- JAVASCRIPT FOR INTERACTIVITY -->
   <script>
